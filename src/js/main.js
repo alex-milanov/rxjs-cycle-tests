@@ -9,5 +9,6 @@ const drivers = {
 };
 
 import usersApp from './examples/users.js';
+import bmiCalcApp from './examples/bmi-calc.js';
 
-Cycle.run(usersApp, drivers);
+Cycle.run(bmiCalcApp, drivers);
