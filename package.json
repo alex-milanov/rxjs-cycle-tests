@@ -1,0 +1,30 @@
+{
+  "name": "rxjs-cycle-tests",
+  "version": "0.1.0",
+  "description": "some initial tests with cycle.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:js",
+    "build:js": "browserify src/js/main.js -o dist/js/main.js -t [ babelify --presets [ es2015 ] ]",
+    "watch": "npm run watch:js",
+    "watch:js": "nodemon --watch 'src/js' --exec 'npm run build:js'"
+  },
+  "keywords": [
+    "cycle",
+    "reactive"
+  ],
+  "author": "Alex Milanov <alex@i4web.biz>",
+  "license": "MIT",
+  "dependencies": {
+    "@cycle/core": "^6.0.0",
+    "@cycle/dom": "^9.0.1",
+    "@cycle/http": "^7.0.0",
+    "nodemon": "^1.8.1",
+    "rx": "^4.0.7"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0"
+  }
+}
