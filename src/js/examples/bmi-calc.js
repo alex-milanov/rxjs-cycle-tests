@@ -13,8 +13,7 @@ let bmiCalcApp = (sources) => {
       weight,
       height,
       bmi: Math.round( weight / Math.pow(height * 0.01, 2))
-    })
-  )
+    }));
 
   return {
     DOM: state$.map( state =>

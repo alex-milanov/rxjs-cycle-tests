@@ -21,13 +21,15 @@ let usersApp = (sources) => {
         button('.btn#fetch-users', 'Fetch users'),
         table('.table', [
           thead(
-            tr( fieldsList.map(field => th(field)) )
+            tr( fieldsList.map(field =>
+              th( field )
+            ))
           ),
           tbody(
-            (!users) ? '' : users.map(
-              user => tr(
-                fieldsList.map(field => td( user[field] ))
-              )
+            (!users) ? '' : users.map( user =>
+              tr( fieldsList.map(field =>
+                td( user[field] )
+              ))
             )
           )
         ])
